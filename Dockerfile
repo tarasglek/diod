@@ -1,4 +1,4 @@
-# docker run --rm --name diod -v `pwd`:/export -p 564:564 diod
+# docker run -d --rm --name diod -v `pwd`:/export -p 564:564 tarasglek/diod
 FROM debian:stretch
 RUN apt update && apt install diod -y && rm -rf /var/lib/apt/lists/*
 COPY run.sh /run.sh 
